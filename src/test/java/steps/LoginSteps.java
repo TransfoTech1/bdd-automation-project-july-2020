@@ -15,8 +15,8 @@ public class LoginSteps {
     LoginPage loginPage;
 
 
-    @Given("^user has opened a web browser and navigated to to aa.com$")
-    public void user_has_opened_a_web_browser_and_navigated_to_to_aa_com() {
+    @Given("^user has opened a web browser and navigated to aa.com$")
+    public void user_has_opened_a_web_browser_and_navigated_to_aa_com() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://www.aa.com");
@@ -42,6 +42,11 @@ public class LoginSteps {
     @Then("^user fills username, last name & password field$")
     public void user_fills_username_last_name_password_field() {
         loginPage.validateUsernameLastnamePasswordIsFilled();
+    }
+
+    @Then("^user close the browser$")
+    public void user_close_the_browser() {
+        driver.quit();
     }
 
 }
