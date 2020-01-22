@@ -1,5 +1,6 @@
 Feature: Homepage feature validations
 
+  @Smoke
   Scenario: User being able to see and click on plan travel
     Given user has opened a web browser and navigated to aa.com
     When user can see plan travel is displayed
@@ -7,6 +8,8 @@ Feature: Homepage feature validations
     And user validates plan travel submenu displayed
     And user close the browser
 
+
+    @Regression
   Scenario: User being able to choose round trip or one way from booking
     Given user has opened a web browser and navigated to aa.com
     When user validates book is clicked

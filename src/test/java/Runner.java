@@ -7,8 +7,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-@CucumberOptions(features = {"src/test/java/features/homepage.feature"},
-        glue = "steps")
+@CucumberOptions(features = {"src/test/java/features"},
+        glue = "stepsdefination",
+        tags = {"@Regression"},
+        //strict = true, // check if any steps are not defined
+        //dryRun = true,// check if mapping is properly done or not
+        plugin = {"html:target/cucumber-html-report"}
+)
 public class Runner {
 
     private TestNGCucumberRunner testNGCucumberRunner;
