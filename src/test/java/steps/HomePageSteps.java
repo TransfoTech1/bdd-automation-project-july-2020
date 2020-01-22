@@ -27,4 +27,25 @@ public class HomePageSteps {
         homePage.validatePlanTravelSubMenuDisplayed();
     }
 
+
+    @When("^user validates book is clicked$")
+    public void user_validates_book_is_clicked() {
+        homePage = PageFactory.initElements(LoginSteps.driver, HomePage.class);
+        homePage.validateBookIsClicked();
+
+    }
+
+    @Then("^user can see round trip and one way options$")
+    public void user_can_see_round_trip_and_one_way_options() {
+        homePage = PageFactory.initElements(LoginSteps.driver, HomePage.class);
+        homePage.validateOneWayAndRoundTripIsDisplayed();
+    }
+
+    @Then("^user can click on both of the round trip and one way buttons$")
+    public void user_can_click_on_both_of_the_round_trip_and_one_way_buttons() {
+        homePage = PageFactory.initElements(LoginSteps.driver, HomePage.class);
+        homePage.validateOneWayAndRoundTripIsClickAble();
+    }
+
+
 }

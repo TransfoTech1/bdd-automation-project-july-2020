@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-@CucumberOptions(features = {"src/test/java/features"},
+@CucumberOptions(features = {"src/test/java/features/homepage.feature"},
         glue = "steps")
 public class Runner {
 
